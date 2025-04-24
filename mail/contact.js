@@ -24,22 +24,16 @@ $(function () {
         submitSuccess: function ($form, event) {
             event.preventDefault();
             
-            const formData = {
-                name: $("input#name").val(),
-                email: $("input#email").val(),
-                subject: $("input#subject").val(),
-                message: $("textarea#message").val()
-            };
-
             $submitButton.prop("disabled", true)
                 .html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...');
 
+            // Submit the form
             $.ajax({
-                url: "contact.php",
-                type: "POST",
-                data: formData,
-                cache: false,
-                success: function (response) {
+                url: $form.attr('action'),
+                type: 'POST',
+                data: $form.serialize(),
+                dataType: 'json',
+                success: function() {
                     $successAlert.html("<div class='alert alert-success'>");
                     $successAlert.find('.alert-success')
                         .html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>")
@@ -48,34 +42,33 @@ $(function () {
                     
                     $form.trigger("reset");
                 },
-                error: function (xhr, status, error) {
-                    console.error("Error:", error);
+                error: function() {
                     $successAlert.html("<div class='alert alert-danger'>");
                     $successAlert.find('.alert-danger')
                         .html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>")
                         .append("<strong>Sorry, there was an error sending your message.</strong>")
                         .append("<p>Please try again later or contact me directly at jaimes.a@northeastern.edu</p>");
                 },
-                complete: function () {
-                    setTimeout(function () {
+                complete: function() {
+                    setTimeout(function() {
                         $submitButton.prop("disabled", false)
                             .html('Send Message');
                     }, 1000);
                 }
             });
         },
-        filter: function () {
+        filter: function() {
             return $(this).is(":visible");
         }
     });
 
     // Clear alerts when focusing on form fields
-    $form.find("input, textarea").focus(function () {
+    $form.find("input, textarea").focus(function() {
         $successAlert.html('');
     });
 
     // Handle tab navigation
-    $("a[data-toggle=\"tab\"]").click(function (e) {
+    $("a[data-toggle=\"tab\"]").click(function(e) {
         e.preventDefault();
         $(this).tab("show");
     });
