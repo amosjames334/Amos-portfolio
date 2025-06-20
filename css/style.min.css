@@ -279,6 +279,11 @@ h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1
 
 /* Custom Portfolio Styles */
 .typed-text-output{color:#fff}
+
+/* Certifications Cards */
+.card{border-radius:10px;transition:all 0.3s ease}
+.card:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,0.1)}
+.badge{font-size:0.75rem;margin:0.125rem}
 .btn-play{position:relative;box-sizing:content-box;display:block;width:32px;height:44px;border-radius:50%;border:none!important;outline:none!important;background:transparent}
 .btn-play:before{content:"";position:absolute;z-index:0;left:50%;top:50%;transform:translateX(-50%) translateY(-50%);background:#fff;border-radius:50%;width:44px;height:44px;transition:all 200ms}
 .btn-play:after{content:"";position:absolute;z-index:1;left:50%;top:50%;transform:translateX(-50%) translateY(-50%);background:#0BCEAF;width:0;height:0;border-style:solid;border-width:8px 0 8px 12px;border-color:transparent transparent transparent #0BCEAF;margin-left:1px}

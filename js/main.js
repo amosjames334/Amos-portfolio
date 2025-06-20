@@ -10,9 +10,9 @@
         if (!ticking) {
             requestAnimationFrame(function() {
                 if ($(window).scrollTop() > 200) {
-                    $('.navbar').fadeIn('slow').css('display', 'flex');
-                } else {
-                    $('.navbar').fadeOut('slow').css('display', 'none');
+            $('.navbar').fadeIn('slow').css('display', 'flex');
+        } else {
+            $('.navbar').fadeOut('slow').css('display', 'none');
                 }
                 ticking = false;
             });
@@ -27,13 +27,13 @@
             
             const target = $(this.hash);
             if (target.length) {
-                $('html, body').animate({
+            $('html, body').animate({
                     scrollTop: target.offset().top - 45
                 }, 1200, 'easeInOutExpo');
-                
-                if ($(this).parents('.navbar-nav').length) {
-                    $('.navbar-nav .active').removeClass('active');
-                    $(this).closest('a').addClass('active');
+            
+            if ($(this).parents('.navbar-nav').length) {
+                $('.navbar-nav .active').removeClass('active');
+                $(this).closest('a').addClass('active');
                 }
             }
         }
@@ -44,15 +44,15 @@
         var typed_strings = $('.typed-text').text();
         if (typed_strings) {
             try {
-                var typed = new Typed('.typed-text-output', {
-                    strings: typed_strings.split(', '),
-                    typeSpeed: 100,
-                    backSpeed: 20,
-                    smartBackspace: false,
+        var typed = new Typed('.typed-text-output', {
+            strings: typed_strings.split(', '),
+            typeSpeed: 100,
+            backSpeed: 20,
+            smartBackspace: false,
                     loop: true,
                     showCursor: true,
                     cursorChar: '|'
-                });
+        });
             } catch (error) {
                 console.warn('Typed.js initialization failed:', error);
                 $('.typed-text-output').text('Data Engineer & AI Specialist');
@@ -82,7 +82,7 @@
                 video.pause();
                 video.currentTime = 0;
             }
-        });
+    });
     });
 
     // Optimized scroll handling with throttling
@@ -100,11 +100,11 @@
             // Back to top button
             if (currentScrollTop > 200) {
                 $('.back-to-top').fadeIn('slow');
-                $('.scroll-to-bottom').fadeOut('slow');
-            } else {
+            $('.scroll-to-bottom').fadeOut('slow');
+        } else {
                 $('.back-to-top').fadeOut('slow');
-                $('.scroll-to-bottom').fadeIn('slow');
-            }
+            $('.scroll-to-bottom').fadeIn('slow');
+        }
             
             lastScrollTop = currentScrollTop;
         }, 100);
@@ -134,11 +134,11 @@
     } else {
         // Fallback for older browsers
         if (typeof $.fn.waypoint !== 'undefined') {
-            $('.skill').waypoint(function () {
-                $('.progress .progress-bar').each(function () {
-                    $(this).css("width", $(this).attr("aria-valuenow") + '%');
-                });
-            }, {offset: '80%'});
+    $('.skill').waypoint(function () {
+        $('.progress .progress-bar').each(function () {
+            $(this).css("width", $(this).attr("aria-valuenow") + '%');
+        });
+    }, {offset: '80%'});
         }
     }
 
@@ -146,22 +146,22 @@
     const portfolioContainer = $('.portfolio-container');
     if (portfolioContainer.length && typeof portfolioContainer.isotope === 'function') {
         var portfolioIsotope = portfolioContainer.isotope({
-            itemSelector: '.portfolio-item',
+        itemSelector: '.portfolio-item',
             layoutMode: 'fitRows',
             animationOptions: {
                 duration: 750,
                 easing: 'linear',
                 queue: false
             }
-        });
+    });
 
-        $('#portfolio-flters li').on('click', function () {
+    $('#portfolio-flters li').on('click', function () {
             const $this = $(this);
             const filterValue = $this.data('filter');
             
-            $("#portfolio-flters li").removeClass('active');
+        $("#portfolio-flters li").removeClass('active');
             $this.addClass('active');
-            
+
             portfolioIsotope.isotope({
                 filter: filterValue,
                 animationOptions: {
@@ -169,7 +169,7 @@
                     easing: 'linear'
                 }
             });
-        });
+    });
     }
     
     // Back to top button with smooth animation
@@ -183,10 +183,10 @@
     const testimonialCarousel = $(".testimonial-carousel");
     if (testimonialCarousel.length && typeof testimonialCarousel.owlCarousel === 'function') {
         testimonialCarousel.owlCarousel({
-            autoplay: true,
-            smartSpeed: 1500,
-            dots: true,
-            loop: true,
+        autoplay: true,
+        smartSpeed: 1500,
+        dots: true,
+        loop: true,
             items: 1,
             nav: false,
             responsive: {
@@ -402,6 +402,6 @@
             // Optionally log performance metrics
         });
     }
-
+    
 })(jQuery);
 
