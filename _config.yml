@@ -1,0 +1,69 @@
+# GitHub Pages Configuration for Amos Jaimes Portfolio
+# ===================================================
+
+# Site Settings
+title: "Amos Jaimes - Portfolio"
+description: "Data Engineer & AI Specialist Portfolio"
+baseurl: ""
+url: "https://amosjaimes.dev"
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# GitHub Pages specific settings
+github_username: amosjaimes
+repository: Amos-portfolio
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude files from build
+exclude:
+  - .gitignore
+  - README.md
+  - changelog.md
+  - node_modules/
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile*
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .bundle/
+  - .git/
+  - .github/
+
+# Include files in build
+include:
+  - _pages
+  - _redirects
+
+# Assets compression
+sass:
+  style: compressed
+
+# Security
+safe: true
+whitelist:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Performance
+future: false
+unpublished: false
+limit_posts: 0
+
+# Default layout
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default" 
