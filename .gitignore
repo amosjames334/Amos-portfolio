@@ -1,1 +1,137 @@
-LICENSE.txt
+# .gitignore
+# ===============================
+
+# Operating System Files
+# -----------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# Editor/IDE Files
+# ----------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.metadata
+.classpath
+.settings/
+
+# Build and Dependencies
+# ----------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Cache and Logs
+# --------------
+.cache/
+*.log
+logs/
+*.tgz
+*.tar.gz
+
+# Backup Files
+# ------------
+*.bak
+*.backup
+*.old
+*.orig
+
+# PHP (if using local development)
+# --------------------------------
+composer.phar
+/vendor/
+composer.lock
+
+# Development Files
+# -----------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Source Maps (if generated)
+# --------------------------
+*.map
+
+# CSS Source Files (keeping only minified)
+# ----------------------------------------
+css/style.css
+scss/
+
+# Temporary Files
+# ---------------
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Archives
+# --------
+*.zip
+*.rar
+*.7z
+
+# Documentation Drafts
+# --------------------
+docs/drafts/
+*.draft.md
+
+# Local Configuration
+# -------------------
+config.local.js
+settings.local.json
+
+# Test Files
+# ----------
+test/
+tests/
+*.test.js
+*.spec.js
+
+# Coverage Reports
+# ----------------
+coverage/
+*.lcov
+
+# Database Files
+# --------------
+*.db
+*.sqlite
+*.sqlite3
+
+# Media Files (large)
+# -------------------
+# Uncomment if you want to exclude large media files
+# *.mp4
+# *.mov
+# *.avi
+# *.mkv
+
+# Keep Important Files
+# --------------------
+!img/profile2.jpg
+!download/Amos_Jaimes_Resume_.pdf
+!download/Elevator_Pitch_Amos-2.mp4
+
+# Project Specific
+# ----------------
+# Add any project-specific files to ignore here

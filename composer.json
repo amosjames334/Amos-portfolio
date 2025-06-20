@@ -1,7 +1,0 @@
-{
-    "name": "amos-portfolio",
-    "description": "Personal portfolio website",
-    "require": {
-        "phpmailer/phpmailer": "^6.8"
-    }
-} 
