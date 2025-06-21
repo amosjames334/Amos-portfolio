@@ -17,7 +17,8 @@ $RECYCLE.BIN/
 
 # Linux
 *~
-
+download/resume.html
+download/Amos_Jaimes_Resume_12.pdf
 # Editor/IDE Files
 # ----------------
 .vscode/
@@ -126,11 +127,7 @@ coverage/
 # *.avi
 # *.mkv
 
-# Keep Important Files
-# --------------------
-!img/profile2.jpg
-!download/Amos_Jaimes_Resume_.pdf
-!download/Elevator_Pitch_Amos-2.mp4
+
 
 # Project Specific
 # ----------------
