@@ -353,7 +353,7 @@
             // Preload critical images
             const profileLink = document.createElement('link');
             profileLink.rel = 'preload';
-            profileLink.href = 'img/profile2.jpg';
+            profileLink.href = 'img/profile1.jpg';
             profileLink.as = 'image';
             document.head.appendChild(profileLink);
             

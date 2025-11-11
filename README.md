@@ -1,6 +1,6 @@
 # Amos Jaimes -  Portfolio
 
-![Portfolio Banner](img/profile2.jpg)
+![Portfolio Banner](img/profile1.jpg)
 
 ## 🚀 About
 
