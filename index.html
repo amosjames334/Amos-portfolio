@@ -142,6 +142,7 @@
 
     <!-- Header Start -->
     <header class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+        <canvas id="particles-canvas"></canvas>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
@@ -175,16 +176,16 @@
     <!-- About Section -->
     <section class="container-fluid py-5" id="about">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
+            <div class="position-relative d-flex align-items-center justify-content-center reveal">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
                 <h2 class="position-absolute text-uppercase text-primary">About Me</h2>
             </div>
             <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
+                <div class="col-lg-5 pb-4 pb-lg-0 reveal-left">
                     <img class="img-fluid rounded-circle w-100" src="img/profile_LinkedIn.png" alt="Amos Jaimes Photo"
                         loading="lazy">
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-7 reveal-right">
                     <h3 class="mb-4">Data Engineer & AI Specialist</h3>
                     <p>A results-driven data professional with expertise in building robust ETL pipelines and automated
                         workflows that transform raw data into actionable insights. Proven track record of reducing
@@ -231,12 +232,12 @@
     <!-- Quality Section -->
     <div class="container-fluid py-5" id="qualification">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
+            <div class="position-relative d-flex align-items-center justify-content-center reveal">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
                 <h1 class="position-absolute text-uppercase text-primary">Education & Experience</h1>
             </div>
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 reveal-left">
                     <h3 class="mb-4">My Education</h3>
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
                         <div class="position-relative mb-4">
@@ -270,7 +271,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 reveal-right">
                     <h3 class="mb-4">My Experience</h3>
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
                         <div class="position-relative mb-4">
@@ -326,12 +327,12 @@
     <!-- Skill Section -->
     <div class="container-fluid py-5" id="skill">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
+            <div class="position-relative d-flex align-items-center justify-content-center reveal">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
                 <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
             </div>
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 reveal-left">
                     <div class="skill mb-4">
                         <div class="d-flex justify-content-between">
                             <h6 class="font-weight-bold">Python</h6>
@@ -373,7 +374,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 reveal-right">
                     <div class="skill mb-4">
                         <div class="d-flex justify-content-between">
                             <h6 class="font-weight-bold">Java</h6>
@@ -423,13 +424,13 @@
     <!-- Certifications Start -->
     <section class="container-fluid py-5 bg-light" id="certifications">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
+            <div class="position-relative d-flex align-items-center justify-content-center reveal">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Certificates
                 </h1>
                 <h2 class="position-absolute text-uppercase text-primary">My Certifications</h2>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
+                <div class="col-lg-4 col-md-6 text-center mb-5 reveal-scale reveal-delay-1">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body d-flex flex-column">
                             <div class="service-icon mx-auto mb-4">
@@ -445,7 +446,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
+                <div class="col-lg-4 col-md-6 text-center mb-5 reveal-scale reveal-delay-2">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body d-flex flex-column">
                             <div class="service-icon mx-auto mb-4"
@@ -462,7 +463,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
+                <div class="col-lg-4 col-md-6 text-center mb-5 reveal-scale reveal-delay-3">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body d-flex flex-column">
                             <div class="service-icon mx-auto mb-4"
@@ -487,12 +488,12 @@
     <!-- Services Start -->
     <section class="container-fluid py-5" id="services">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
+            <div class="position-relative d-flex align-items-center justify-content-center reveal">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Services</h1>
                 <h2 class="position-absolute text-uppercase text-primary">What I Do</h2>
             </div>
             <div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
+                <div class="col-lg-4 col-md-6 text-center mb-5 reveal reveal-delay-1">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="service-icon fa fa-2x fa-database text-primary"></i>
                         <div class="pl-4">
@@ -502,7 +503,7 @@
                     <p>Design and implement robust data pipelines, ETL processes, and data warehouse solutions to
                         transform raw data into actionable insights.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
+                <div class="col-lg-4 col-md-6 text-center mb-5 reveal reveal-delay-2">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="service-icon fa fa-2x fa-brain text-primary"></i>
                         <div class="pl-4">
@@ -512,7 +513,7 @@
                     <p>Develop intelligent systems using machine learning algorithms, neural networks, and AI frameworks
                         to solve complex business problems.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
+                <div class="col-lg-4 col-md-6 text-center mb-5 reveal reveal-delay-3">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="service-icon fa fa-2x fa-code text-primary"></i>
                         <div class="pl-4">
@@ -522,7 +523,7 @@
                     <p>Create custom software solutions, drivers, and applications using Python, C++, Java, and LabVIEW
                         for various industries.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
+                <div class="col-lg-4 col-md-6 text-center mb-5 reveal reveal-delay-4">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="service-icon fa fa-2x fa-chart-line text-primary"></i>
                         <div class="pl-4">
@@ -532,7 +533,7 @@
                     <p>Perform comprehensive data analysis, statistical modeling, and create interactive dashboards for
                         data-driven decision making.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
+                <div class="col-lg-4 col-md-6 text-center mb-5 reveal reveal-delay-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="service-icon fa fa-2x fa-cloud text-primary"></i>
                         <div class="pl-4">
@@ -542,7 +543,7 @@
                     <p>Design and deploy scalable cloud-based solutions using Azure DevOps and other cloud platforms for
                         optimal performance.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
+                <div class="col-lg-4 col-md-6 text-center mb-5 reveal reveal-delay-6">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="service-icon fa fa-2x fa-server text-primary"></i>
                         <div class="pl-4">
@@ -560,158 +561,211 @@
     <!-- Portfolio Start -->
     <section class="container-fluid py-5" id="portfolio">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
+            <div class="position-relative d-flex align-items-center justify-content-center reveal">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Portfolio</h1>
                 <h2 class="position-absolute text-uppercase text-primary">My Work</h2>
             </div>
             <div class="row">
-                <div class="col-12 text-center mb-2">
+                <div class="col-12 text-center mb-2 reveal reveal-delay-1">
                     <ul class="list-inline mb-4" id="portfolio-flters">
                         <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".data-engineering">Data Engineering
-                        </li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".machine-learning">Machine Learning
-                        </li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".software-dev">Software Development
-                        </li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".data-engineering">Data Engineering</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".machine-learning">Machine Learning</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".software-dev">Software Development</li>
                     </ul>
                 </div>
             </div>
             <div class="row portfolio-container">
-                <!-- Research Agent System -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item machine-learning">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center"
-                            style="height: 250px; background: linear-gradient(45deg, #6f42c1, #5a32a3);">
-                            <i class="fas fa-brain fa-3x text-white"></i>
+                <!-- High-Throughput Audio Processing Pipeline -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item data-engineering reveal reveal-delay-1">
+                    <div class="project-card">
+                        <div class="project-card-icon" style="background:linear-gradient(135deg,#e83e8c,#c21868);">
+                            <i class="fas fa-headphones-alt"></i>
                         </div>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/amosjames334/AGENTICAI">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
+                        <div class="project-card-content">
+                            <span class="project-badge de">Data Engineering</span>
+                            <h5 class="project-title">High-Throughput Audio Processing Pipeline</h5>
+                            <p class="project-desc">Asynchronous microservices pipeline using FastAPI and Redis for speech recognition (Whisper) and sentiment analysis (RoBERTa), with Docker containerization and horizontal scaling.</p>
+                            <div class="project-tech">
+                                <span>FastAPI</span><span>Redis</span><span>Whisper</span><span>Docker</span>
+                            </div>
                         </div>
+                        <a href="https://github.com/amosjames334/High-Throughput-Audio-Processing-Pipeline" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
                     </div>
-                    <h5 class="font-weight-bold mb-1">Research Agent System</h5>
-                    <p class="mb-2">A sophisticated multi-agent AI system that automates academic research analysis
-                        through collaborative AI agents powered by LangGraph and OpenAI GPT-4.</p>
+                </div>
+                <!-- Research Agent System -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item machine-learning reveal reveal-delay-2">
+                    <div class="project-card">
+                        <div class="project-card-icon" style="background:linear-gradient(135deg,#6f42c1,#5a32a3);">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-card-content">
+                            <span class="project-badge ml">Machine Learning</span>
+                            <h5 class="project-title">Research Agent System</h5>
+                            <p class="project-desc">Multi-agent AI platform built on LangGraph where specialized agents collaboratively analyze research papers, with FAISS-powered semantic search and arXiv integration.</p>
+                            <div class="project-tech">
+                                <span>LangGraph</span><span>FAISS</span><span>arXiv</span><span>GPT-4</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/amosjames334/Research-Agent-System" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                <!-- Distributed Job Scheduler -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item software-dev reveal reveal-delay-3">
+                    <div class="project-card">
+                        <div class="project-card-icon" style="background:linear-gradient(135deg,#fd7e14,#dc6502);">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-card-content">
+                            <span class="project-badge sd">Software Development</span>
+                            <h5 class="project-title">Distributed Job Scheduler</h5>
+                            <p class="project-desc">Fault-tolerant distributed scheduling system with leader election, heartbeat monitoring, crash recovery, and Prometheus/Grafana observability.</p>
+                            <div class="project-tech">
+                                <span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/amosjames334/Distributed_Job_Scheduler" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                <!-- Customer Feedback Classifier -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item machine-learning reveal reveal-delay-1">
+                    <div class="project-card">
+                        <div class="project-card-icon" style="background:linear-gradient(135deg,#20c997,#17a085);">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="project-card-content">
+                            <span class="project-badge ml">Machine Learning</span>
+                            <h5 class="project-title">Customer Feedback Classifier</h5>
+                            <p class="project-desc">Production ML system with fine-tuned DistilBERT for sentiment classification, LangGraph-based intelligent agent routing, and SageMaker deployment.</p>
+                            <div class="project-tech">
+                                <span>DistilBERT</span><span>LangGraph</span><span>SageMaker</span><span>CloudWatch</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/amosjames334/Customer_Feedback_Classifier" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
+                    </div>
                 </div>
                 <!-- Medical Data ETL Pipeline -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item data-engineering">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center"
-                            style="height: 250px; background: linear-gradient(45deg, #007bff, #0056b3);">
-                            <i class="fas fa-notes-medical fa-3x text-white"></i>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item data-engineering reveal reveal-delay-2">
+                    <div class="project-card">
+                        <div class="project-card-icon" style="background:linear-gradient(135deg,#007bff,#0056b3);">
+                            <i class="fas fa-notes-medical"></i>
                         </div>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/amosjames334/Cloud-Native-Medical-Data-ETL-Pipeline">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
+                        <div class="project-card-content">
+                            <span class="project-badge de">Data Engineering</span>
+                            <h5 class="project-title">Medical Data ETL Pipeline</h5>
+                            <p class="project-desc">Cloud-native ETL pipeline processing FDA drug approvals and clinical trial data using Airflow DAGs, KubernetesPodOperator, AWS S3 data lake, and GitHub Actions CI/CD.</p>
+                            <div class="project-tech">
+                                <span>Airflow</span><span>Kubernetes</span><span>AWS S3</span><span>CI/CD</span>
+                            </div>
                         </div>
+                        <a href="https://github.com/amosjames334/Cloud-Native-Medical-Data-ETL-Pipeline" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
                     </div>
-                    <h5 class="font-weight-bold mb-1">Medical Data ETL Pipeline</h5>
-                    <p class="mb-2">A production-grade, cloud-native ETL pipeline for processing FDA drug approvals and
-                        clinical trial data using Apache Airflow, Kubernetes, and AWS S3.</p>
                 </div>
                 <!-- CPS AI Assistant -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item machine-learning">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center"
-                            style="height: 250px; background: linear-gradient(45deg, #0BCEAF, #078571);">
-                            <i class="fas fa-robot fa-3x text-white"></i>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item machine-learning reveal reveal-delay-3">
+                    <div class="project-card">
+                        <div class="project-card-icon" style="background:linear-gradient(135deg,#0BCEAF,#078571);">
+                            <i class="fas fa-robot"></i>
                         </div>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/amosjames334/cps_assistant_rag">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
+                        <div class="project-card-content">
+                            <span class="project-badge ml">Machine Learning</span>
+                            <h5 class="project-title">CPS AI Assistant</h5>
+                            <p class="project-desc">RAG-based conversational agent for automating academic advisor workflows, built with LangChain, Supabase vector databases, and real-time query processing.</p>
+                            <div class="project-tech">
+                                <span>LangChain</span><span>Supabase</span><span>RAG</span><span>Python</span>
+                            </div>
                         </div>
+                        <a href="https://github.com/amosjames334/CPS-AI-Assistant" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
                     </div>
-                    <h5 class="font-weight-bold mb-1">CPS AI Assistant</h5>
-                    <p class="mb-2">Enterprise-grade RAG application with LangChain, Supabase vector databases for
-                        academic advisor workflows</p>
                 </div>
                 <!-- AR Face Tracking MVP -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item machine-learning">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center"
-                            style="height: 250px; background: linear-gradient(45deg, #17a2b8, #138496);">
-                            <i class="fas fa-eye fa-3x text-white"></i>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item machine-learning reveal reveal-delay-1">
+                    <div class="project-card">
+                        <div class="project-card-icon" style="background:linear-gradient(135deg,#17a2b8,#138496);">
+                            <i class="fas fa-eye"></i>
                         </div>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/amosjames334/AR_FaceTracking_MVP">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
+                        <div class="project-card-content">
+                            <span class="project-badge ml">Machine Learning</span>
+                            <h5 class="project-title">AR Face Tracking MVP</h5>
+                            <p class="project-desc">Real-time AR application with MediaPipe Face Mesh, Three.js, achieving 30+ FPS on web and mobile platforms.</p>
+                            <div class="project-tech">
+                                <span>MediaPipe</span><span>Three.js</span><span>WebGL</span><span>AR</span>
+                            </div>
                         </div>
+                        <a href="https://github.com/amosjames334/AR_FaceTracking_MVP" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
                     </div>
-                    <h5 class="font-weight-bold mb-1">AR Face Tracking MVP</h5>
-                    <p class="mb-2">Real-time AR application with MediaPipe Face Mesh, Three.js, 30+ FPS on web/mobile
-                        platforms</p>
                 </div>
                 <!-- Productivity Patrol -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item machine-learning">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center"
-                            style="height: 250px; background: linear-gradient(45deg, #28a745, #1e7e34);">
-                            <i class="fas fa-shield-alt fa-3x text-white"></i>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item machine-learning reveal reveal-delay-2">
+                    <div class="project-card">
+                        <div class="project-card-icon" style="background:linear-gradient(135deg,#28a745,#1e7e34);">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/amosjames334/Productivity-Patrol">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
+                        <div class="project-card-content">
+                            <span class="project-badge ml">Machine Learning</span>
+                            <h5 class="project-title">Productivity Patrol</h5>
+                            <p class="project-desc">AI-powered desktop monitoring with facial recognition, emotion detection, and real-time productivity analytics dashboard.</p>
+                            <div class="project-tech">
+                                <span>PyQt6</span><span>OpenCV</span><span>ML</span><span>Python</span>
+                            </div>
                         </div>
+                        <a href="https://github.com/amosjames334/Productivity-Patrol" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
                     </div>
-                    <h5 class="font-weight-bold mb-1">Productivity Patrol</h5>
-                    <p class="mb-2">AI-powered desktop monitoring with facial recognition, emotion detection, PyQt6
-                        dashboard</p>
                 </div>
                 <!-- Vallive Tournament Platform -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item software-dev">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center"
-                            style="height: 250px; background: linear-gradient(45deg, #ffc107, #e0a800);">
-                            <i class="fas fa-trophy fa-3x text-white"></i>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item software-dev reveal reveal-delay-3">
+                    <div class="project-card">
+                        <div class="project-card-icon" style="background:linear-gradient(135deg,#ffc107,#e0a800);">
+                            <i class="fas fa-trophy"></i>
                         </div>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/amosjames334/vallive">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
+                        <div class="project-card-content">
+                            <span class="project-badge sd">Software Development</span>
+                            <h5 class="project-title">Vallive Tournament Platform</h5>
+                            <p class="project-desc">Full-stack responsive web app for gaming community with Firebase real-time sync and authentication.</p>
+                            <div class="project-tech">
+                                <span>Firebase</span><span>JavaScript</span><span>HTML/CSS</span><span>Auth</span>
+                            </div>
                         </div>
+                        <a href="https://github.com/amosjames334/vallive" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
                     </div>
-                    <h5 class="font-weight-bold mb-1">Vallive Tournament Platform</h5>
-                    <p class="mb-2">Full-stack responsive web app for gaming community with Firebase real-time sync and
-                        authentication</p>
                 </div>
                 <!-- EDA Loan Application -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item data-engineering">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center"
-                            style="height: 250px; background: linear-gradient(45deg, #dc3545, #c82333);">
-                            <i class="fas fa-chart-line fa-3x text-white"></i>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item data-engineering reveal reveal-delay-1">
+                    <div class="project-card">
+                        <div class="project-card-icon" style="background:linear-gradient(135deg,#dc3545,#c82333);">
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/amosjames334/EDA">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
+                        <div class="project-card-content">
+                            <span class="project-badge de">Data Engineering</span>
+                            <h5 class="project-title">EDA Loan Application Analysis</h5>
+                            <p class="project-desc">Interactive visualizations and comprehensive data analysis for loan application patterns and insights.</p>
+                            <div class="project-tech">
+                                <span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span>
+                            </div>
                         </div>
+                        <a href="https://github.com/amosjames334/EDA" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
                     </div>
-                    <h5 class="font-weight-bold mb-1">EDA Loan Application Analysis</h5>
-                    <p class="mb-2">Interactive visualizations and data analysis using Python, Pandas, Matplotlib,
-                        Seaborn</p>
                 </div>
-                <!-- ETL Pipeline Development 
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item data-engineering">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <div class="portfolio-img d-flex align-items-center justify-content-center" style="height: 250px; background: linear-gradient(45deg, #6f42c1, #5a32a3);">
-                            <i class="fas fa-database fa-3x text-white"></i>
-                        </div>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="#" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <h5 class="font-weight-bold mb-1">ETL Pipeline Development</h5>
-                    <p class="mb-2">Automated data workflows and system integration pipelines for enterprise systems</p>
-                </div> -->
             </div>
         </div>
     </section>
@@ -720,12 +774,12 @@
     <!-- Contact Section -->
     <section class="container-fluid py-5" id="contact">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
+            <div class="position-relative d-flex align-items-center justify-content-center reveal">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
                 <h2 class="position-absolute text-uppercase text-primary">Contact Me</h2>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-8 reveal">
                     <div class="contact-form text-center">
                         <div id="success"></div>
                         <form id="contactForm" action="https://formspree.io/f/xanwrqbz" method="POST">
@@ -824,7 +878,7 @@
             <div class="d-flex justify-content-center mb-3">
                 <a class="text-white" href="#">Help</a>
             </div>
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">2025</a>. All Rights Reserved to Amos
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">2026</a>. All Rights Reserved to Amos
                 Jaimes</p>
         </div>
     </div>

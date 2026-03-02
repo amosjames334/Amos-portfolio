@@ -1,18 +1,17 @@
 (function ($) {
     "use strict";
 
-    // Performance optimizations
-    let isScrolling = false;
     let ticking = false;
 
-    // Navbar on scrolling with performance optimization
     $(window).scroll(function () {
         if (!ticking) {
             requestAnimationFrame(function() {
                 if ($(window).scrollTop() > 200) {
-            $('.navbar').fadeIn('slow').css('display', 'flex');
-        } else {
-            $('.navbar').fadeOut('slow').css('display', 'none');
+                    $('.navbar').fadeIn('slow').css('display', 'flex');
+                    $('.navbar').addClass('scrolled');
+                } else {
+                    $('.navbar').fadeOut('slow').css('display', 'none');
+                    $('.navbar').removeClass('scrolled');
                 }
                 ticking = false;
             });
@@ -20,39 +19,37 @@
         }
     });
 
-    // Smooth scrolling on the navbar links with performance
     $(".navbar-nav a").on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
             
             const target = $(this.hash);
             if (target.length) {
-            $('html, body').animate({
+                $('html, body').animate({
                     scrollTop: target.offset().top - 45
                 }, 1200, 'easeInOutExpo');
             
-            if ($(this).parents('.navbar-nav').length) {
-                $('.navbar-nav .active').removeClass('active');
-                $(this).closest('a').addClass('active');
+                if ($(this).parents('.navbar-nav').length) {
+                    $('.navbar-nav .active').removeClass('active');
+                    $(this).closest('a').addClass('active');
                 }
             }
         }
     });
 
-    // Typed Initiate with error handling
     if ($('.typed-text-output').length == 1) {
         var typed_strings = $('.typed-text').text();
         if (typed_strings) {
             try {
-        var typed = new Typed('.typed-text-output', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
+                var typed = new Typed('.typed-text-output', {
+                    strings: typed_strings.split(', '),
+                    typeSpeed: 100,
+                    backSpeed: 20,
+                    smartBackspace: false,
                     loop: true,
                     showCursor: true,
                     cursorChar: '|'
-        });
+                });
             } catch (error) {
                 console.warn('Typed.js initialization failed:', error);
                 $('.typed-text-output').text('Data Engineer & AI Specialist');
@@ -60,7 +57,6 @@
         }
     }
 
-    // Enhanced Modal Video handling
     $(document).ready(function () {
         $('.btn-play').click(function (e) {
             e.preventDefault();
@@ -82,10 +78,9 @@
                 video.pause();
                 video.currentTime = 0;
             }
-    });
+        });
     });
 
-    // Optimized scroll handling with throttling
     let scrollTimeout;
     let lastScrollTop = 0;
     
@@ -97,20 +92,18 @@
         }
         
         scrollTimeout = setTimeout(function() {
-            // Back to top button
             if (currentScrollTop > 200) {
                 $('.back-to-top').fadeIn('slow');
-            $('.scroll-to-bottom').fadeOut('slow');
-        } else {
+                $('.scroll-to-bottom').fadeOut('slow');
+            } else {
                 $('.back-to-top').fadeOut('slow');
-            $('.scroll-to-bottom').fadeIn('slow');
-        }
+                $('.scroll-to-bottom').fadeIn('slow');
+            }
             
             lastScrollTop = currentScrollTop;
         }, 100);
     });
 
-    // Skills animation with Intersection Observer for better performance
     if ('IntersectionObserver' in window) {
         const skillObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -132,34 +125,32 @@
             skillObserver.observe(skillSection);
         }
     } else {
-        // Fallback for older browsers
         if (typeof $.fn.waypoint !== 'undefined') {
-    $('.skill').waypoint(function () {
-        $('.progress .progress-bar').each(function () {
-            $(this).css("width", $(this).attr("aria-valuenow") + '%');
-        });
-    }, {offset: '80%'});
+            $('.skill').waypoint(function () {
+                $('.progress .progress-bar').each(function () {
+                    $(this).css("width", $(this).attr("aria-valuenow") + '%');
+                });
+            }, {offset: '80%'});
         }
     }
 
-    // Enhanced Portfolio isotope and filter with better animations
     const portfolioContainer = $('.portfolio-container');
     if (portfolioContainer.length && typeof portfolioContainer.isotope === 'function') {
         var portfolioIsotope = portfolioContainer.isotope({
-        itemSelector: '.portfolio-item',
+            itemSelector: '.portfolio-item',
             layoutMode: 'fitRows',
             animationOptions: {
                 duration: 750,
                 easing: 'linear',
                 queue: false
             }
-    });
+        });
 
-    $('#portfolio-flters li').on('click', function () {
+        $('#portfolio-flters li').on('click', function () {
             const $this = $(this);
             const filterValue = $this.data('filter');
             
-        $("#portfolio-flters li").removeClass('active');
+            $("#portfolio-flters li").removeClass('active');
             $this.addClass('active');
 
             portfolioIsotope.isotope({
@@ -169,24 +160,22 @@
                     easing: 'linear'
                 }
             });
-    });
+        });
     }
     
-    // Back to top button with smooth animation
     $('.back-to-top').click(function (e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: 0}, 1200, 'easeInOutExpo');
         return false;
     });
 
-    // Testimonials carousel (if present)
     const testimonialCarousel = $(".testimonial-carousel");
     if (testimonialCarousel.length && typeof testimonialCarousel.owlCarousel === 'function') {
         testimonialCarousel.owlCarousel({
-        autoplay: true,
-        smartSpeed: 1500,
-        dots: true,
-        loop: true,
+            autoplay: true,
+            smartSpeed: 1500,
+            dots: true,
+            loop: true,
             items: 1,
             nav: false,
             responsive: {
@@ -197,7 +186,6 @@
         });
     }
 
-    // Enhanced Contact Form handling with comprehensive validation
     $('#contactForm').on('submit', function(e) {
         e.preventDefault();
         
@@ -205,15 +193,12 @@
         const submitBtn = $('#sendMessageButton');
         const successDiv = $('#success');
         
-        // Clear previous errors
         form.find('.form-control').removeClass('is-invalid');
         successDiv.html('');
         
-        // Comprehensive validation
         let isValid = true;
         const errors = [];
         
-        // Name validation
         const name = $('#name').val().trim();
         if (!name || name.length < 2) {
             $('#name').addClass('is-invalid');
@@ -221,7 +206,6 @@
             isValid = false;
         }
         
-        // Email validation
         const email = $('#email').val().trim();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email || !emailRegex.test(email)) {
@@ -230,7 +214,6 @@
             isValid = false;
         }
         
-        // Subject validation
         const subject = $('#subject').val().trim();
         if (!subject || subject.length < 3) {
             $('#subject').addClass('is-invalid');
@@ -238,7 +221,6 @@
             isValid = false;
         }
         
-        // Message validation
         const message = $('#message').val().trim();
         if (!message || message.length < 10) {
             $('#message').addClass('is-invalid');
@@ -251,10 +233,8 @@
             return;
         }
 
-        // Submit form
         submitBtn.prop('disabled', true).html('<i class="fas fa-spinner fa-spin me-2"></i>Sending...');
         
-        // Use Formspree's endpoint
         $.ajax({
             url: form.attr('action'),
             method: 'POST',
@@ -265,7 +245,6 @@
                 form[0].reset();
             },
             error: function(xhr, status, error) {
-                // For Formspree, even successful submissions might return as "error" due to redirect
                 if (xhr.status === 200 || xhr.responseText.includes('Thanks')) {
                     successDiv.html('<div class="alert alert-success"><i class="fas fa-check-circle me-2"></i>Thank you! Your message has been sent successfully. I\'ll get back to you soon.</div>');
                     form[0].reset();
@@ -277,7 +256,6 @@
             complete: function() {
                 submitBtn.prop('disabled', false).html('<i class="fas fa-paper-plane me-2"></i>Send Message');
                 
-                // Clear success message after 8 seconds
                 setTimeout(function() {
                     successDiv.fadeOut('slow', function() {
                         $(this).html('').show();
@@ -287,14 +265,12 @@
         });
     });
 
-    // Real-time form validation
     $('#contactForm input, #contactForm textarea').on('input blur', function() {
         const $this = $(this);
         const value = $this.val().trim();
         
         $this.removeClass('is-invalid is-valid');
         
-        // Individual field validation
         if ($this.attr('id') === 'name' && value.length >= 2) {
             $this.addClass('is-valid');
         } else if ($this.attr('id') === 'email' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
@@ -305,16 +281,11 @@
             $this.addClass('is-valid');
         }
         
-        // Clear error messages
         if ($('#success .alert-danger').length && value) {
-            const errors = $('#success .alert-danger').text();
-            if (!errors.includes('Please enter a valid name') || $this.attr('id') !== 'name') {
-                $('#success').html('');
-            }
+            $('#success').html('');
         }
     });
 
-    // Lazy loading for images (with fallback)
     if ('loading' in HTMLImageElement.prototype) {
         const images = document.querySelectorAll('img[loading="lazy"]');
         images.forEach(img => {
@@ -323,7 +294,6 @@
             }
         });
     } else {
-        // Fallback for browsers that don't support lazy loading
         const lazyImages = document.querySelectorAll('img[data-src]');
         if (lazyImages.length && 'IntersectionObserver' in window) {
             const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -341,16 +311,13 @@
         }
     }
 
-    // Performance: Preload critical resources
     $(document).ready(function() {
         try {
-            // Preload resume file
             const resumeLink = document.createElement('link');
             resumeLink.rel = 'prefetch';
             resumeLink.href = 'download/Amos_Jaimes_Resume_.pdf';
             document.head.appendChild(resumeLink);
             
-            // Preload critical images
             const profileLink = document.createElement('link');
             profileLink.rel = 'preload';
             profileLink.href = 'img/profile1.jpg';
@@ -362,14 +329,11 @@
         }
     });
 
-    // Enhanced accessibility features
     $(document).ready(function() {
-        // Add focus management for modals
         $('#videoModal').on('shown.bs.modal', function() {
             $(this).find('.close').focus();
         });
         
-        // Keyboard navigation for portfolio filters
         $('#portfolio-flters li').on('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -377,7 +341,6 @@
             }
         });
         
-        // Add aria-label to social media links
         $('.btn-social').each(function() {
             const $this = $(this);
             if (!$this.attr('aria-label')) {
@@ -389,19 +352,171 @@
         });
     });
 
-    // Error boundary for critical functions
     window.addEventListener('error', function(e) {
         console.error('JavaScript error:', e.error);
-        // Optionally send error reports to a service
     });
 
-    // Performance monitoring
     if (window.performance && window.performance.mark) {
         window.addEventListener('load', function() {
             performance.mark('portfolio-loaded');
-            // Optionally log performance metrics
         });
     }
-    
-})(jQuery);
 
+    // ================================
+    // Scroll Reveal Animation System
+    // ================================
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+            revealObserver.observe(el);
+        });
+    } else {
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+            el.classList.add('active');
+        });
+    }
+
+    // ================================
+    // Hero Particle Animation
+    // ================================
+    (function initParticles() {
+        const canvas = document.getElementById('particles-canvas');
+        if (!canvas) return;
+        
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animationId;
+        const PARTICLE_COUNT = 50;
+        const CONNECTION_DISTANCE = 120;
+
+        function resize() {
+            const hero = canvas.parentElement;
+            canvas.width = hero.offsetWidth;
+            canvas.height = hero.offsetHeight;
+        }
+
+        function createParticle() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+                radius: Math.random() * 2 + 0.5,
+                opacity: Math.random() * 0.4 + 0.1
+            };
+        }
+
+        function init() {
+            resize();
+            particles = [];
+            for (let i = 0; i < PARTICLE_COUNT; i++) {
+                particles.push(createParticle());
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+                
+                p.x += p.vx;
+                p.y += p.vy;
+                
+                if (p.x < 0) p.x = canvas.width;
+                if (p.x > canvas.width) p.x = 0;
+                if (p.y < 0) p.y = canvas.height;
+                if (p.y > canvas.height) p.y = 0;
+                
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(11, 206, 175, ' + p.opacity + ')';
+                ctx.fill();
+                
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (dist < CONNECTION_DISTANCE) {
+                        const lineOpacity = (1 - dist / CONNECTION_DISTANCE) * 0.15;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = 'rgba(11, 206, 175, ' + lineOpacity + ')';
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+            
+            animationId = requestAnimationFrame(draw);
+        }
+
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                resize();
+            }, 250);
+        });
+
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (!animationId) draw();
+                } else {
+                    if (animationId) {
+                        cancelAnimationFrame(animationId);
+                        animationId = null;
+                    }
+                }
+            });
+        }, { threshold: 0 });
+
+        heroObserver.observe(canvas.parentElement);
+        init();
+        draw();
+    })();
+
+    // ================================
+    // Active Nav Link on Scroll
+    // ================================
+    (function initActiveNav() {
+        const sections = document.querySelectorAll('section[id], div[id="qualification"], div[id="skill"]');
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        
+        if (!sections.length || !navLinks.length) return;
+        
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, {
+            threshold: 0.3,
+            rootMargin: '-80px 0px -50% 0px'
+        });
+        
+        sections.forEach(section => navObserver.observe(section));
+    })();
+
+})(jQuery);
