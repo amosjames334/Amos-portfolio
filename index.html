@@ -52,6 +52,9 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
 
+    <!-- Enhanced Custom Styles -->
+    <link href="css/custom.css" rel="stylesheet">
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -92,6 +95,19 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+    <!-- Loading Screen -->
+    <div id="page-loader">
+        <div class="loader-logo">Amos<span>.</span></div>
+        <div class="loader-ring"></div>
+        <div class="loader-dots">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand ml-lg-3">
@@ -150,7 +166,7 @@
                         alt="Amos Jaimes - Data Engineer and AI Specialist" loading="eager">
                 </div>
                 <div class="col-lg-7 text-center text-lg-left">
-                    <h3 class="text-white font-weight-normal mb-3">I'm</h3>
+                    <h3 class="text-white font-weight-normal mb-3">Hello, I'm</h3>
                     <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">
                         Amos Jaimes</h1>
                     <h2 class="typed-text-output d-inline font-weight-lighter text-white"></h2>
@@ -221,6 +237,22 @@
                         </div>
                         <div class="col-sm-6 py-2">
                             <h6>Location: <span class="text-secondary">Boston, MA</span></h6>
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="about-stats reveal">
+                        <div class="stat-card reveal-delay-1">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Exp.</span>
+                        </div>
+                        <div class="stat-card reveal-delay-2">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-card reveal-delay-3">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Certifications</span>
                         </div>
                     </div>
                 </div>
@@ -493,65 +525,59 @@
                 <h2 class="position-absolute text-uppercase text-primary">What I Do</h2>
             </div>
             <div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5 reveal reveal-delay-1">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="service-icon fa fa-2x fa-database text-primary"></i>
-                        <div class="pl-4">
-                            <h4 class="font-weight-bold m-0">Data Engineering</h4>
+                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-delay-1">
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-database"></i>
                         </div>
+                        <h4>Data Engineering</h4>
+                        <p>Design and implement robust data pipelines, ETL processes, and data warehouse solutions to transform raw data into actionable insights.</p>
                     </div>
-                    <p>Design and implement robust data pipelines, ETL processes, and data warehouse solutions to
-                        transform raw data into actionable insights.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5 reveal reveal-delay-2">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="service-icon fa fa-2x fa-brain text-primary"></i>
-                        <div class="pl-4">
-                            <h4 class="font-weight-bold m-0">AI/ML Development</h4>
+                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-delay-2">
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-brain"></i>
                         </div>
+                        <h4>AI/ML Development</h4>
+                        <p>Develop intelligent systems using machine learning algorithms, neural networks, and AI frameworks to solve complex business problems.</p>
                     </div>
-                    <p>Develop intelligent systems using machine learning algorithms, neural networks, and AI frameworks
-                        to solve complex business problems.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5 reveal reveal-delay-3">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="service-icon fa fa-2x fa-code text-primary"></i>
-                        <div class="pl-4">
-                            <h4 class="font-weight-bold m-0">Software Development</h4>
+                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-delay-3">
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-code"></i>
                         </div>
+                        <h4>Software Development</h4>
+                        <p>Create custom software solutions, drivers, and applications using Python, C++, Java, and LabVIEW for various industries.</p>
                     </div>
-                    <p>Create custom software solutions, drivers, and applications using Python, C++, Java, and LabVIEW
-                        for various industries.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5 reveal reveal-delay-4">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="service-icon fa fa-2x fa-chart-line text-primary"></i>
-                        <div class="pl-4">
-                            <h4 class="font-weight-bold m-0">Data Analytics</h4>
+                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-delay-4">
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-chart-line"></i>
                         </div>
+                        <h4>Data Analytics</h4>
+                        <p>Perform comprehensive data analysis, statistical modeling, and create interactive dashboards for data-driven decision making.</p>
                     </div>
-                    <p>Perform comprehensive data analysis, statistical modeling, and create interactive dashboards for
-                        data-driven decision making.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5 reveal reveal-delay-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="service-icon fa fa-2x fa-cloud text-primary"></i>
-                        <div class="pl-4">
-                            <h4 class="font-weight-bold m-0">Cloud Solutions</h4>
+                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-delay-5">
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-cloud"></i>
                         </div>
+                        <h4>Cloud Solutions</h4>
+                        <p>Design and deploy scalable cloud-based solutions using AWS, Azure, and GCP for optimal performance and reliability.</p>
                     </div>
-                    <p>Design and deploy scalable cloud-based solutions using Azure DevOps and other cloud platforms for
-                        optimal performance.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5 reveal reveal-delay-6">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="service-icon fa fa-2x fa-server text-primary"></i>
-                        <div class="pl-4">
-                            <h4 class="font-weight-bold m-0">ServiceNow Development</h4>
+                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-delay-6">
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-server"></i>
                         </div>
+                        <h4>ServiceNow Development</h4>
+                        <p>Develop and customize ServiceNow solutions for IT Service Management, workflow automation, and enterprise integrations.</p>
                     </div>
-                    <p>Develop and customize ServiceNow solutions for IT Service Management, workflow automation, and
-                        enterprise integrations.</p>
                 </div>
             </div>
         </div>
@@ -810,7 +836,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control py-3 px-4" style="height: 150px; width: 733px;"
+                                        <textarea class="form-control py-3 px-4" style="height: 150px;"
                                             id="message" name="message" rows="5" placeholder="Your Message *" required
                                             data-validation-required-message="Please enter a message."></textarea>
                                         <p class="help-block text-danger"></p>
@@ -827,30 +853,36 @@
 
                         <!-- Contact Info -->
                         <div class="row mt-5">
-                            <div class="col-md-4 mb-4">
-                                <div class="d-flex align-items-center">
-                                    <i class="fas fa-map-marker-alt fa-2x text-primary mr-3"></i>
+                            <div class="col-md-4 mb-4 reveal reveal-delay-1">
+                                <div class="contact-info-card">
+                                    <div class="contact-info-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
                                     <div>
-                                        <h5 class="font-weight-bold">Location</h5>
-                                        <p class="mb-0">Boston, MA, USA</p>
+                                        <h5>Location</h5>
+                                        <p>Boston, MA, USA</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="d-flex align-items-center">
-                                    <i class="fas fa-phone fa-2x text-primary mr-3"></i>
+                            <div class="col-md-4 mb-4 reveal reveal-delay-2">
+                                <div class="contact-info-card">
+                                    <div class="contact-info-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
                                     <div>
-                                        <h5 class="font-weight-bold">Phone</h5>
-                                        <p class="mb-0">+1 617-934-9015</p>
+                                        <h5>Phone</h5>
+                                        <p>+1 617-934-9015</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="d-flex align-items-center">
-                                    <i class="fas fa-envelope fa-2x text-primary mr-3"></i>
+                            <div class="col-md-5 mb-4 reveal reveal-delay-3">
+                                <div class="contact-info-card">
+                                    <div class="contact-info-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
                                     <div>
-                                        <h5 class="font-weight-bold">Email</h5>
-                                        <p class="mb-0">jaimes.a@northeastern.edu</p>
+                                        <h5>Email</h5>
+                                        <p>jaimes.a@northeastern.edu</p>
                                     </div>
                                 </div>
                             </div>
@@ -865,21 +897,13 @@
     <!-- Footer Start -->
     <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="container text-center py-5">
-            <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2"
-                    href="https://www.facebook.com/share/15wssvS2V8/?mibextid=wwXIfr"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/amos-jaimes-a8107621b"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social"
-                    href="https://www.instagram.com/a_m0s?igsh=MWNxeDBrcjBvdXc5NA%3D%3D&utm_source=qr"><i
-                        class="fab fa-instagram"></i></a>
+            <div class="d-flex justify-content-center mb-4" style="gap: 0.75rem;">
+                <a class="btn btn-light btn-social" href="https://www.linkedin.com/in/amos-jaimes-a8107621b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="https://github.com/amosjames334" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a class="btn btn-light btn-social" href="https://www.instagram.com/a_m0s?igsh=MWNxeDBrcjBvdXc5NA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-light btn-social" href="https://www.facebook.com/share/15wssvS2V8/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             </div>
-            <div class="d-flex justify-content-center mb-3">
-                <a class="text-white" href="#">Help</a>
-            </div>
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">2026</a>. All Rights Reserved to Amos
-                Jaimes</p>
+            <p class="m-0" style="color: rgba(204,214,246,0.6); font-size: 0.85rem;">&copy; 2026 Amos Jaimes &mdash; All Rights Reserved</p>
         </div>
     </div>
     <!-- Footer End -->

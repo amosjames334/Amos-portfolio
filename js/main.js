@@ -1,18 +1,46 @@
 (function ($) {
     "use strict";
 
+    // ================================
+    // Loading Screen
+    // ================================
+    $(window).on('load', function () {
+        setTimeout(function () {
+            $('#page-loader').addClass('fade-out');
+        }, 500);
+    });
+
+    // ================================
+    // Navbar — always visible, add scrolled class
+    // ================================
     let ticking = false;
 
     $(window).scroll(function () {
         if (!ticking) {
-            requestAnimationFrame(function() {
-                if ($(window).scrollTop() > 200) {
-                    $('.navbar').fadeIn('slow').css('display', 'flex');
+            requestAnimationFrame(function () {
+                const scrollTop = $(window).scrollTop();
+
+                // Scrolled class for compact navbar
+                if (scrollTop > 80) {
                     $('.navbar').addClass('scrolled');
                 } else {
-                    $('.navbar').fadeOut('slow').css('display', 'none');
                     $('.navbar').removeClass('scrolled');
                 }
+
+                // Scroll progress bar
+                const docHeight = $(document).height() - $(window).height();
+                const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                $('#scroll-progress').css('width', progress + '%');
+
+                // Back to top / scroll to bottom buttons
+                if (scrollTop > 200) {
+                    $('.back-to-top').fadeIn('slow');
+                    $('.scroll-to-bottom').fadeOut('slow');
+                } else {
+                    $('.back-to-top').fadeOut('slow');
+                    $('.scroll-to-bottom').fadeIn('slow');
+                }
+
                 ticking = false;
             });
             ticking = true;
@@ -81,28 +109,7 @@
         });
     });
 
-    let scrollTimeout;
-    let lastScrollTop = 0;
-    
-    $(window).scroll(function () {
-        const currentScrollTop = $(this).scrollTop();
-        
-        if (scrollTimeout) {
-            clearTimeout(scrollTimeout);
-        }
-        
-        scrollTimeout = setTimeout(function() {
-            if (currentScrollTop > 200) {
-                $('.back-to-top').fadeIn('slow');
-                $('.scroll-to-bottom').fadeOut('slow');
-            } else {
-                $('.back-to-top').fadeOut('slow');
-                $('.scroll-to-bottom').fadeIn('slow');
-            }
-            
-            lastScrollTop = currentScrollTop;
-        }, 100);
-    });
+    // (scroll handling consolidated into the main scroll handler above)
 
     if ('IntersectionObserver' in window) {
         const skillObserver = new IntersectionObserver((entries) => {
