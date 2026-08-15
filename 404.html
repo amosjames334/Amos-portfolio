@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
   
-  <!-- SEO & Canonical Link -->
   <link rel="canonical" href="https://portfolio.amosjaimes.com">
   <meta http-equiv="refresh" content="0; url=https://portfolio.amosjaimes.com">
   <meta name="robots" content="noindex, follow">
 
-  <!-- Immediate JavaScript Redirect -->
   <script>
-    window.location.replace("https://portfolio.amosjaimes.com");
+    const targetDomain = "https://portfolio.amosjaimes.com";
+    const path = window.location.pathname.replace(/^\/Amos-portfolio/, '');
+    const redirectUrl = targetDomain + path + window.location.search + window.location.hash;
+    window.location.replace(redirectUrl);
   </script>
 
   <style>
@@ -79,16 +80,13 @@
     .btn:hover {
       background-color: #2ea043;
     }
-    .btn:active {
-      transform: scale(0.98);
-    }
   </style>
 </head>
 <body>
   <div class="card">
     <div class="spinner"></div>
     <h1>Redirecting to Portfolio...</h1>
-    <p>You are being automatically redirected to the new portfolio website.</p>
+    <p>You are being automatically redirected to the new portfolio site.</p>
     <a class="btn" href="https://portfolio.amosjaimes.com">Click here if not redirected</a>
   </div>
 </body>
